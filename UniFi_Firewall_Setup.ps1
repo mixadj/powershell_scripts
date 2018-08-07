@@ -1,5 +1,7 @@
 #Setup Windows Firewall to use UniFi Controller as service
-#Found on Unifi forum (Credit $USERNAME HERE)
+#This is dirty, do not use it
+#Found on Unifi forum https://community.ubnt.com/t5/UniFi-Wireless/UniFi-AP-firewall-settings-for-Windows-Server-2012-R2/td-p/1090855
+#Credit to forum user Jammrock for initial script
 #Added STUN Ports
 
 New-NetFirewallRule -Name UniFi-Mgmt-In -DisplayName "UniFi-Mgmt (TCP-In 8081)" -Description "Allows incoming UniFi management traffic" -Group UniFi -Enabled True -Protocol TCP -LocalPort 8081 -Direction Inbound
