@@ -34,4 +34,6 @@ New-NetFirewallRule -Name UniFi-DvcDisc-Out -DisplayName "UniFi-DvcDisc (UDP-Out
 
 New-NetFirewallRule -Name UniFi-STUN-Out -DisplayName "UniFi-STUN (UDP-Out 3478)" -Description "Allows outgoing UniFi STUN traffic" -Group UniFi -Enabled True -Protocol UDP -LocalPort 3478 -Direction Outbound
 
-New-NetFirewallRule -Name UniFi-STUN-In -DisplayName "UniFi-STUN (UDP-In 3478)" -Description "Allowsincoming UniFi STUN traffic" -Group UniFi -Enabled True -Protocol UDP -LocalPort 3478 -Direction Inbound
+New-NetFirewallRule -Name UniFi-STUN-In -DisplayName "UniFi-STUN (UDP-In 3478)" -Description "Allows incoming UniFi STUN traffic" -Group UniFi -Enabled True -Protocol UDP -LocalPort 3478 -Direction Inbound
+
+New-NetFirewallRule -Name UniFi-SpeedTest-In -DisplayName "UniFi-SpeedTest (TCP-In 6789)" -Description "Allows incoming UniFi mobile speedtest traffic" -Group UniFi -Enabled True -Protocol TCP -LocalPort 6789 -Direction Inbound
